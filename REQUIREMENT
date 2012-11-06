@@ -3,4 +3,5 @@ sudo apt-get install python-numpy python-scipy
 git clone git://github.com/pybrain/pybrain.git
 sudo pybrain
 sudo python setup.py install
+sudo pip install phpserialize
 
