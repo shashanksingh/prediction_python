@@ -1,0 +1,2 @@
+create table ola_booking_duplicate like ola_bookings;
+
