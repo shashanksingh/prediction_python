@@ -12,7 +12,7 @@ for key,value in enumerate(sample_space):
 		#print "\nOutput \n"
 	start_time=time.time()
 	cl = KMeansClustering(a)
-	clusters = cl.getclusters(3)
+	clusters = cl.getclusters(9)
 	end_time=time.time()
 	#print clusters
 	print "total time " + str(end_time-start_time) + " secs for "+ str(i) +" element"
