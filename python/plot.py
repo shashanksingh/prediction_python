@@ -4,6 +4,11 @@ from matplotlib.ticker import NullFormatter
 
 x = []
 y = []
+#x = np.random.randn(2)
+#y = np.random.randn(2)
+#print "x=>"+str(x)+str(len(x))
+#print "\ny=>"+str(y)+str(len(y))
+
 
 def convert_to_numpy_x_y(data):
 	_x = []
@@ -21,15 +26,14 @@ def convert_to_numpy_x_y(data):
 		
 	
 			if (len(lats) > 1):
-				_x.append(lats[0])
-				_x.append(lats[1])
+				_x.append(float(lats[0]))
+				_x.append(float(lats[1]))
 	
 			if (len(lngs) > 1):
-				_y.append(lngs[0])
-				_y.append(lngs[1])
+				_y.append(float(lngs[0]))
+				_y.append(float(lngs[1]))
 
-	x = np.asarray(_x)
-	y = np.asarray(_y)
-	print "x=>"+str(x)+str(len(x))
-	print "\ny=>"+str(y)+str(len(y))
+	x = np.array(_x)
+	y = np.array(_y)
+	return x,y
 
