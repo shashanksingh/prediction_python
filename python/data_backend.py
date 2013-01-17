@@ -30,4 +30,8 @@ def save_to_backend(data,backend="file"):
 	elif (backend == "redis"):#todo
 		return redis_lib_obj.save(data)
 	else: 
-		return "not valid backend" 
+		return "not valid backend"
+
+def read_from_backend(backend="file"):
+	pass
+	 
