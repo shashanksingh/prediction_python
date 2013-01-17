@@ -4,16 +4,16 @@
 import MySQLdb as mdb
 import sys
 
-con = None
 
 def execute(query):
+	con = None
 	try:
-		con = mdb.connect('localhost', 'root','root', 'blackbox_prod')
-		con.query(query)
-		result = con.use_result()
-		full_result_query=result.fetch_all()
+		con = mdb.connect('olacabs-dev.in', 'blackbox','blackbox', 'blackbox_prod')
+		cur = con.cursor()
+		cur.execute(query)
+		full_result_query=cur.fetchone()
     
-	except _mysql.Error, e:
+	except mdb.Error, e:
 		return "Error %d: %s" % (e.args[0], e.args[1])
 
 	finally:
