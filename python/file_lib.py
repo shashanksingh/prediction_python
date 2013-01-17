@@ -14,3 +14,6 @@ class file_lib:
 			return False
 		
 		return True
+
+	def read(self):
+		pass

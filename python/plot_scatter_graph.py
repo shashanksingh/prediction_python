@@ -1,12 +1,7 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.ticker import NullFormatter
+from plot import *
 
-def scatter_plot():
-	# the random data
-	x = np.random.randn(1000)
-	y = np.random.randn(1000)
-
+def scatter_plot(data):
+	convert_to_numpy_x_y(data)
 	nullfmt   = NullFormatter()         # no labels
 
 	# definitions for the axes
