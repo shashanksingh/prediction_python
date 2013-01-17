@@ -46,6 +46,6 @@ def get_all_pickup_drop_lat_lng_timestamp_moved_origin():
                 and ob.deleted = 0
                 and nst.status in (5 , 6)
                 group by ob.id
-                order by nst.status ASC LIMIT 1;
+                order by nst.status ASC LIMIT 1000;
                 """
 
