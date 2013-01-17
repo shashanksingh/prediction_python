@@ -1,10 +1,7 @@
 from plot import *
 
 def scatter_plot(data):
-
-	x,y = convert_to_numpy_x_y(data)
-	#x =  np.array([0.128387, 0.106769])
-	#y =  np.array([0.05023, 0.04106])
+	x,y,timestamp = convert_to_numpy_x_y(data)
 	nullfmt   = NullFormatter()         # no labels
 
 	# definitions for the axes

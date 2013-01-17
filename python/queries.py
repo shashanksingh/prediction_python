@@ -39,7 +39,7 @@ def get_all_pickup_drop_lat_lng_timestamp_moved_origin():
                 left join
                         ola_citytaxi_status_update nst ON ob.id = nst.booking_id
                 where
-                convert_tz(ob.pickup_date, '+0:00', '+5:30') between '2013-1-1 00:00:00' and '2013-1-15 23:59:59'
+                convert_tz(ob.pickup_date, '+0:00', '+5:30') between '2012-1-1 00:00:00' and '2013-1-15 23:59:59'
                 and ob.status = 'completed'
                 and ob.service_type = 'p2p'
                 and ob.service_city = 'Mumbai'
