@@ -24,8 +24,11 @@ def scatter_plot(data):
 	axHistx.xaxis.set_major_formatter(nullfmt)
 	axHisty.yaxis.set_major_formatter(nullfmt)
 
+	x_split = np.split(x,2)
+	y_split = np.split(y,2)
 	# the scatter plot:
-	axScatter.scatter(x, y)
+	axScatter.scatter(x_split[0], y_split[0], marker="*", c="green", facecolors="white", edgecolors="red")
+	axScatter.scatter(x_split[1], y_split[0], marker="o", c="green", facecolors="white", edgecolors="green")
 
 	# now determine nice limits by hand:
 	binwidth = 0.25
