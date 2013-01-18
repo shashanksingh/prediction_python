@@ -67,13 +67,13 @@ def convert_to_numpy_x_y_timestamp_pickup(data):
                 timestamp = 0
 
 
-            if (len(lats) > 1):
+            if (len(lats) > 0):
                 _x.append(float(lats[0]))
 
-            if (len(lngs) > 1):
+            if (len(lngs) > 0):
                 _y.append(float(lngs[0]))
 
-            if (len(time)>0):
+            if (len(time) > 0):
                 _timestamp.append(time)
 
     x = np.array(_x)
