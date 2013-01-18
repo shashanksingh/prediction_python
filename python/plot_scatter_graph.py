@@ -24,9 +24,9 @@ def scatter_plot(x,y,timestamp):
 	axHisty.yaxis.set_major_formatter(nullfmt)
 
 	# the scatter plot:
-	axScatter.scatter(x, y, marker="*", c="green", facecolors="white", edgecolors="red")
+	axScatter.scatter(x, y, marker="o", c="green", facecolors="white", edgecolors="red")
 	#axScatter.scatter(x_split[1], y_split[0], marker="o", c="green", facecolors="white", edgecolors="green")
-	axScatter.plot(x, y, 'rs--', label='line 1', linewidth=2)
+	#axScatter.plot(x, y, 'rs--', label='line 1', linewidth=2)
 
 	# now determine nice limits by hand:
 	binwidth = 0.25
