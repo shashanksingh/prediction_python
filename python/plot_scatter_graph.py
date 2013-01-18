@@ -1,7 +1,6 @@
 from plot import *
 
-def scatter_plot(data):
-	x,y,timestamp = convert_to_numpy_x_y(data)
+def scatter_plot(x,y,timestamp):
 	nullfmt   = NullFormatter()         # no labels
 
 	# definitions for the axes
@@ -24,11 +23,10 @@ def scatter_plot(data):
 	axHistx.xaxis.set_major_formatter(nullfmt)
 	axHisty.yaxis.set_major_formatter(nullfmt)
 
-	x_split = np.split(x,2)
-	y_split = np.split(y,2)
 	# the scatter plot:
-	axScatter.scatter(x_split[0], y_split[0], marker="*", c="green", facecolors="white", edgecolors="red")
-	axScatter.scatter(x_split[1], y_split[0], marker="o", c="green", facecolors="white", edgecolors="green")
+	axScatter.scatter(x, y, marker="*", c="green", facecolors="white", edgecolors="red")
+	#axScatter.scatter(x_split[1], y_split[0], marker="o", c="green", facecolors="white", edgecolors="green")
+	axScatter.plot(x, y, 'rs--', label='line 1', linewidth=2)
 
 	# now determine nice limits by hand:
 	binwidth = 0.25

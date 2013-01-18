@@ -4,7 +4,7 @@ def randrange(n, vmin, vmax):
     return (vmax-vmin)*np.random.rand(n) + vmin
 
 def threeD_scatter_plot(data):
-	x,y,timestamp = convert_to_numpy_x_y(data)
+	x,y,timestamp = convert_to_numpy_x_y_timestamp(data)
 	fig = plt.figure()
 	ax = fig.add_subplot(111, projection='3d')
 	n = 100
