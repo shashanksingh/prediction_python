@@ -9,8 +9,8 @@ def run():
 	data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
 	print len(data)
 	#save_to_backend(data,"file")	
-	#scatter_plot(data)
-	threeD_scatter_plot(data)
+	scatter_plot(data)
+	#threeD_scatter_plot(data)
 
 
 run()

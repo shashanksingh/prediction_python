@@ -8,10 +8,13 @@ from redis_lib import *
 file_lib_obj = file_lib()
 redis_lib_obj = redis_lib()
 
+mysql_pass = "wheninfrancespeakfrenchanddrinkchampaign"
+mysql_user = "reader"
+mysql_host = "103.8.124.41"
 def execute(query):
 	con = None
 	try:
-		con = mdb.connect('olacabs-dev.in', 'blackbox','blackbox', 'blackbox_prod')
+		con = mdb.connect(mysql_host, mysql_user, mysql_pass, 'blackbox_prod')
 		cur = con.cursor()
 		cur.execute(query)
 		full_result_query=cur.fetchall()
