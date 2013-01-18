@@ -5,4 +5,4 @@ git clone git://github.com/pybrain/pybrain.git
 cd pybrain
 sudo python setup.py install
 sudo pip install phpserialize
-
+sudo pip install networkx
