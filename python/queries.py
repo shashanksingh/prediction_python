@@ -54,8 +54,8 @@ def get_all_pickup_lat_lng_timestamp_moved_origin(limit):
         return """
                 select ob.id,
                 group_concat(nst.status),
-                group_concat(18.9647 - nst.lat) lat,
-                group_concat(nst.lng - 72.8258) lng,
+                group_concat(nst.lat) lat,
+                group_concat(nst.lng) lng,
                 group_concat(nst.timestamp) timestamp
                 from
                         ola_bookings ob
