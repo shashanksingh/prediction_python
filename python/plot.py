@@ -47,7 +47,7 @@ def convert_to_numpy_x_y_timestamp_pickup_drop(data):
 	timestamp = np.array(_timestamp)
 	return x,y,timestamp
 
-def convert_to_numpy_x_y_timestamp_pickup(data):
+def convert_to_numpy_x_y_timestamp_singular_data(data):
     _x = []#internal use for x axis
     _y = []#intrnal use
     _timestamp = []
