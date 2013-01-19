@@ -42,6 +42,11 @@ def scatter_plot(x,y,timestamp):
 
 	axHistx.set_xlim( axScatter.get_xlim() )
 	axHisty.set_ylim( axScatter.get_ylim() )
+	
+	axScatter.text(18.9300,72.8200,"ChurchGate",bbox=dict(facecolor='green', alpha=0.5))
+	#axScatter.text(19.1833,72.8333,"Malad",bbox=dict(facecolor='green', alpha=0.5))
+	axScatter.text(19.0587,72.8997,"Chembur",bbox=dict(facecolor='green', alpha=0.5))
+	axScatter.text(19.2045,72.8376,"Kandivili",bbox=dict(facecolor='green', alpha=0.5))
 
 	plt.show()
 

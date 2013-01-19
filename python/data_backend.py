@@ -37,5 +37,10 @@ def save_to_backend(data,backend="file"):
 		return "not valid backend"
 
 def read_from_backend(backend="file"):
-	pass
-	 
+	if (backend == "file"):
+		return file_lib_obj.read()
+	elif (backend == "redis"):#todo
+		return redis_lib_obj.read()
+	else:
+		return "not valid backend"
+ 
