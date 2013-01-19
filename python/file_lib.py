@@ -12,8 +12,17 @@ class file_lib:
 				writer.writerows(data)
 		except csv.Error as e:
 			return False
-		
 		return True
 
 	def read(self):
-		pass
+		data = ""
+		try:
+			with open('/tmp/file_backend_for_booking_predictor.csv', 'rb') as f:
+				file_reader = csv.reader(f, delimiter=',', quotechar='|')
+				for row in file_reader:
+					data += ', '.join(row)
+		except csv.Error as e:
+			return False
+
+		return data
+
