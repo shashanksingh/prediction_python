@@ -1,5 +1,6 @@
 from queries import *
 from data_backend import *
+from clustering import *
 from plot_scatter_graph import *
 from plot_3d_scatter_graph import *
 from plot_heatmap import *
@@ -10,7 +11,7 @@ def run():
 	print "Getting Input data"
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp())
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
-	data=execute(get_all_pickup_lat_lng_timestamp(limit=5000))
+	data=execute(get_all_pickup_lat_lng_timestamp(limit=80000))
 	#data=read_from_backend("file")
 
 	"""Debug Print"""
@@ -24,10 +25,14 @@ def run():
 	print "Convert"	
 	x,y,timestamp = convert_to_numpy_x_y_timestamp_singular_data(data)#we are passing pickup data only
 
+	"""Clustering"""
+	print "Clustering"
+	kmeans(x,y,timestamp)
+
 	"""PLOT NODE"""
 	print "Plot"
 	#scatter_plot(x,y,timestamp)
-	heatmap_with_hexagon_cell(x,y,timestamp)
+	#heatmap_standard(x,y,timestamp)
 	#threeD_scatter_plot(data)
 
 
