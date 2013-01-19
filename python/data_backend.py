@@ -20,7 +20,8 @@ def execute(query):
 		full_result_query=cur.fetchall()
     
 	except mdb.Error, e:
-		return "Error %d: %s" % (e.args[0], e.args[1])
+		import sys
+		sys.exit("Error %d: %s" % (e.args[0], e.args[1]))
 
 	finally:
 		if con:
