@@ -26,8 +26,8 @@ def run():
 
 	"""PLOT NODE"""
 	print "Plot"
-	scatter_plot(x,y,timestamp)
-	#heatmap(x,y,timestamp)
+	#scatter_plot(x,y,timestamp)
+	heatmap_two(x,y,timestamp)
 	#threeD_scatter_plot(data)
 
 
