@@ -10,11 +10,11 @@ def run():
 	print "Getting Input data"
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp())
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
-	data=execute(get_all_pickup_lat_lng_timestamp(limit=9))
+	data=execute(get_all_pickup_lat_lng_timestamp(limit=5000))
 	#data=read_from_backend("file")
 
 	"""Debug Print"""
-	print len(data)
+	print "Actual Data Being Used=>"+str(len(data))
 
 	"""Saving Node"""
 	print "Save"
@@ -27,7 +27,7 @@ def run():
 	"""PLOT NODE"""
 	print "Plot"
 	#scatter_plot(x,y,timestamp)
-	heatmap_two(x,y,timestamp)
+	heatmap_with_hexagon_cell(x,y,timestamp)
 	#threeD_scatter_plot(data)
 
 
