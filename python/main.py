@@ -11,7 +11,7 @@ def run():
 	print "Getting Input data"
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp())
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
-	data=execute(get_all_pickup_lat_lng_timestamp(limit=10000))
+	data=execute(get_all_pickup_lat_lng_timestamp(limit=90000,service_city="mumbai"))
 	#data=read_from_backend("file")
 
 	"""Debug Print"""

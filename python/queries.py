@@ -72,7 +72,7 @@ def get_all_pickup_lat_lng_timestamp_moved_origin(limit):
                 order by nst.status ASC LIMIT 
                 """+str(limit)+""";"""
 
-def get_all_pickup_lat_lng_timestamp(limit):
+def get_all_pickup_lat_lng_timestamp(limit,service_city):
         """read the function above , only gets pickup lat,lngalso acc. to google 18.9647 and 72.8258 is center of mumbi"""
         return """
                 select ob.id,
@@ -85,10 +85,10 @@ def get_all_pickup_lat_lng_timestamp(limit):
                 left join
                         ola_citytaxi_status_update nst ON ob.id = nst.booking_id
                 where
-                convert_tz(ob.pickup_date, '+0:00', '+5:30') between '2013-1-1 00:00:00' and '2013-1-20 23:59:59'
+                convert_tz(ob.pickup_date, '+0:00', '+5:30') between '2012-1-1 00:00:00' and '2013-1-20 23:59:59'
                 and ob.status = 'completed'
                 and ob.service_type = 'p2p'
-                and ob.service_city = 'Mumbai'
+                and ob.service_city = '"""+service_city+"""'
                 and ob.deleted = 0
                 and nst.status = 5
                 group by ob.id
