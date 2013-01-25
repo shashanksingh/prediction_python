@@ -24,6 +24,6 @@ def generate_time_series(x,y,timestamp):
 		print point_x, point_y, grid
 		time_series.append([grid,timestamp[count]])
 		count += 1
-		print time_series
 	time_series_np = np.asanyarray(time_series)
+	print time_series_np
 	return time_series_np
