@@ -4,6 +4,7 @@ from clustering import *
 from plot_scatter_graph import *
 from plot_3d_scatter_graph import *
 from plot_heatmap import *
+from time_series import *
 
 def run():
 	print "Executing..."
@@ -11,7 +12,7 @@ def run():
 	print "Getting Input data"
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp())
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
-	data=execute(get_all_pickup_lat_lng_timestamp(limit=90000,service_city="mumbai"))
+	data=execute(get_all_pickup_lat_lng_timestamp(limit=3,service_city="mumbai"))
 	#data=read_from_backend("file")
 
 	"""Debug Print"""
@@ -27,7 +28,12 @@ def run():
 
 	"""Clustering"""
 	print "Clustering"
-	kmeans(x,y,timestamp)
+	#kmeans(x,y,timestamp)
+
+	"""Generating Time Series"""
+	print "Time Series"
+	print generate_time_series(x,y,timestamp)
+	
 
 	"""PLOT NODE"""
 	print "Plot"
