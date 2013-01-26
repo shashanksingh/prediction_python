@@ -6,17 +6,25 @@ def get_grid(xc,yc):
 	return grid
 
 def normalize_timestamp(timestamp):
+	#print timestamp, type(timestamp)	
+	#if type(timestamp) == int:
+	#if True:
+	timestamp= (int(timestamp) - int(1343579331))
 	return timestamp
+	#else:
+	#	return False
 
 def generate_time_series(x,y,timestamp):
 	count = 0
 	time_series = []
+	grid = []
 	for point_x in x:
 		point_y = y[count]
-		grid_current =  get_grid(point_x,point_y)
 		timestamp_current = normalize_timestamp(timestamp[count])
-		time_series.append([grid_current,timestamp_current])
+		#if timestamp_current != False:
+		grid_current =  get_grid(point_x,point_y)
+		time_series.append(timestamp_current)
+		grid.append(grid_current)
 		count += 1
-	time_series_np = np.asanyarray(time_series)
-	print time_series_np
-	return time_series_np
+	#time_series_np = np.asanyarray(time_series)
+	return grid, time_series
