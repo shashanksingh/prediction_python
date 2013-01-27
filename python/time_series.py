@@ -9,7 +9,8 @@ def normalize_timestamp(timestamp):
 	#print timestamp, type(timestamp)	
 	#if type(timestamp) == int:
 	#if True:
-	timestamp= (int(timestamp) - int(1343579331))
+	timestamp = timestamp.partition(',')[0]
+	timestamp = (int(timestamp) - int(1343579331))
 	return timestamp
 	#else:
 	#	return False
