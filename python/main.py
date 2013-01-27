@@ -13,7 +13,7 @@ def run():
 	print "Getting Input data"
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp())
 	#data=execute(get_all_pickup_drop_lat_lng_timestamp_moved_origin())
-	data=execute(get_all_pickup_lat_lng_timestamp(limit=100,service_city="mumbai"))
+	data=execute(get_all_pickup_lat_lng_timestamp(limit=90000,service_city="mumbai"))
 	#data=read_from_backend("file")
 
 	"""Debug Print"""
@@ -42,7 +42,7 @@ def run():
 	#heatmap_standard(x,y,timestamp)
 	#threeD_scatter_plot(data)
 	simple_line_plot(time_series,grid)
-	curve_fitting_plot(time_series,grid)
+	#curve_fitting_plot(time_series,grid)
 
 
 if __name__ == "__main__":
