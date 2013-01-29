@@ -6,3 +6,4 @@ cd pybrain
 sudo python setup.py install
 sudo pip install phpserialize
 sudo pip install networkx
+sudo apt-get install python-scikits-learn python-skimage-lib  python-sklearn python-sklearn-doc python-scikits.statsmodels python-sklearn-lib

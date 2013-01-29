@@ -2,10 +2,12 @@ from plot import *
 from pylab import *
 def simple_line_plot(x,y):
 	grid(True)
-	plot(x,y)
-	savefig("simple_line_plot.png")
-	xlabel('time (s)')
-	ylabel('voltage (mV)')
+	plt.plot(x,y)
+	xlabel('Time (s since jan 1 1970)')
+	ylabel('Location of Hotspot of pickup')
+        figure = plt.gcf()
+        figure.set_size_inches(36, 12)
+	savefig("simple_line_plot.png",dpi=50)
 	show()
 
 
