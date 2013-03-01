@@ -1,3 +1,5 @@
+mkdir ~/code
+cd ~/code
 sudo apt-get install python-pip
 sudo apt-get install python-mysqldb
 sudo apt-get install python-numpy python-scipy
@@ -7,3 +9,9 @@ sudo python setup.py install
 sudo pip install phpserialize
 sudo pip install networkx
 sudo apt-get install python-scikits-learn python-skimage-lib  python-sklearn python-sklearn-doc python-scikits.statsmodels python-sklearn-lib
+sudo apt-get install h5utils hdf5-helpers hdf5-tools libhdf5-7 libhdf5-dev
+pip install -e git+https://github.com/PyTables/PyTables.git@v.2.4.0#egg=tables  
+svn co http://svn.scipy.org/svn/scikits/trunk/timeseries timeseries
+cd timeseries
+python setup.py install
+sudo pip instal statsmodel
