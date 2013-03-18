@@ -3,7 +3,6 @@ import re
 def preprocess_tweet(tweets):
 	tweet_processed = []
 	for tweet in tweets:
-		tweet =  tweet.lower()
 		#Convert to lower case
 		tweet = tweet.lower()
 		#Convert www.* or https?://* to URL
@@ -18,3 +17,4 @@ def preprocess_tweet(tweets):
 		tweet = tweet.strip('\'"')
 		tweet_processed.append(tweet);
 	return tweet_processed
+
