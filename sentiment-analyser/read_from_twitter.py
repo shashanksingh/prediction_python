@@ -1,6 +1,5 @@
 import urllib
 import simplejson
-from config import SEARCH_OLA_TERMS
 
 
 #tweet_type : {recent,popular,mixed}
@@ -15,11 +14,10 @@ def searchTweets(query,page=0,count=10,tweet_type='mixed',rate_per_page=30,since
 	return tweets
 
 
-def collated_twitter_data(since='', until='2013-12-12'):
+def collated_twitter_data(since='', until='2013-12-12',search_terms=[]):
 	tweets = []
-	for terms in (SEARCH_OLA_TERMS):
+	for terms in (search_terms):
 		tweets.extend(searchTweets(terms,since,until))
 	return tweets
 
 
-print collated_twitter_data();
