@@ -10,7 +10,7 @@ def debate08_sentiment_tweets():
 def github_full_training_dataset():
 	print "EXECUTING::github_full_training_dataset"
 	dataset = []
-	with open('rawdata/github_full_training_dataset.csv', 'rb') as csvfile:
+	with open('training/rawdata/github_full_training_dataset.csv', 'rb') as csvfile:
 		data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
 		for row in data_reader:
 			sentiment = row[0]
@@ -23,10 +23,9 @@ def github_full_training_dataset():
 # list of function acting as source for training csv's
 data_source_func = [debate08_sentiment_tweets , github_full_training_dataset]
 
-def main():
+def get_data():
 	result = []
 	for data_source in data_source_func:
 		result.append(data_source())
-	print result[1]
+	return result[1]
 
-main()
