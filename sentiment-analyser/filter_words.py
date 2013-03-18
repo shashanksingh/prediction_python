@@ -1,6 +1,6 @@
 import re
 #initialize stopWords
-stopWords = []
+stop_words = []
  
 def replace_two_or_more(s):
     #look for 2 or more repetitions of character and replace with the character itself hmmmm -> hm
@@ -9,18 +9,18 @@ def replace_two_or_more(s):
 
 def get_stop_word_list(stopWordListFileName):
     #read the stopwords file and build a list
-    stopWords = []
-    stopWords.append('AT_USER')
-    stopWords.append('URL')
+    stop_words = []
+    stop_words.append('AT_USER')
+    stop_words.append('URL')
  
     fp = open(stopWordListFileName, 'r')
     line = fp.readline()
     while line:
         word = line.strip()
-        stopWords.append(word)
+        stop_words.append(word)
         line = fp.readline()
     fp.close()
-    return stopWords
+    return stop_words
 
 def get_feature_vector(tweet):
     feature_vector = []
@@ -34,7 +34,7 @@ def get_feature_vector(tweet):
         #check if the word stats with an alphabet
         val = re.search(r"^[a-zA-Z][a-zA-Z0-9]*$", w)
         #ignore if it is a stop word
-        if(w in stopWords or val is None):
+        if(w in stop_words or val is None):
             continue
         else:
             feature_vector.append(w.lower())
