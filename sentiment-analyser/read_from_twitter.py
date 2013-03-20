@@ -1,6 +1,6 @@
 import urllib
 import simplejson
-#import datetime
+import time
 
 
 #tweet_type : {recent,popular,mixed}
@@ -12,7 +12,7 @@ def searchTweets(query,page=1,count=30,tweet_type='mixed',rate_per_page=30,since
 	search = urllib.urlopen("http://search.twitter.com/search.json?%s"%str(params))
 	dict = simplejson.loads(search.read())
 	for result in dict["results"]: # result is a list of dictionaries
-		tweets.append({'text':result["text"],'timestamp':result["created_at"]})
+		tweets.append({'text':result["text"],'timestamp':time(result["created_at"])})
 	return tweets
 
 
