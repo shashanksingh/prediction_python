@@ -33,7 +33,7 @@ for page in range (1,5):
 	for tweet in all_tweets_from_olacabs:
 		date_of_data = tweet["timestamp"]
 		date_array[str(date_of_data)+"_count_of_olacabs"] = date_array.get((str(date_of_data)+"_count_of_olacabs"),0) + 1
-		date_keys_olacabs.append(str(date_of_data)
+		date_keys_olacabs.append(str(date_of_data))
 
 pp.pprint(date_array)
 
@@ -71,8 +71,8 @@ from pylab import *
 
 figure(num=None, figsize=(14, 6), dpi=80, facecolor='w', edgecolor='k')
 subplot(211)
-positive_sentiment_plot,  =  plot(t, positive_sentiment, 'b-o',linewidth = 1.0)
-negative_sentiment_plot, =  plot(t, negative_sentiment, 'r-o',linewidth=1.0)
+positive_sentiment_plot,  =  plot(date_keys_others, positive_sentiment, 'b-o',linewidth = 1.0)
+negative_sentiment_plot, =  plot(date_keys_others, negative_sentiment, 'r-o',linewidth=1.0)
 legend([positive_sentiment_plot,negative_sentiment_plot],["+ive","-ive"])
 xlabel('Day of this month[March]')
 ylabel('Sentiments #Olacabs')
@@ -80,8 +80,8 @@ title('Sentiment Analysis for 7 day')
 grid(True)
 
 subplot(212)
-count_tweets_plot, = plot(t, count,'g--o',linewidth = 1.0)
-total_tweets_plot, = plot(t, total_tweets, 'k--o' , linewidth = 1.0)
+count_tweets_plot, = plot(date_keys_others, count,'g--o',linewidth = 1.0)
+total_tweets_plot, = plot(date_keys_olacabs, total_tweets, 'k--o' , linewidth = 1.0)
 legend([count_tweets_plot,total_tweets_plot],["#olacabs","@Olacabs"])
 label = "Economist Tweet"
 plt.annotate(label,xy = (14,10), xytext = (40, 40),textcoords = 'offset points', ha = 'right', va = 'bottom',bbox = dict(boxstyle = 'round,pad=0.5', fc = 'yellow', alpha = 0.5),arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
