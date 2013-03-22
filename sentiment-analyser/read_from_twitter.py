@@ -9,7 +9,7 @@ TWITTER_APP_KEY_SECRET = 'Di3eyCF4zJMQn0LUfThTel8jmCkymFJZeEtAnPtD5Q'
 TWITTER_ACCESS_TOKEN = '14086063-MNKACDve56vXjyIRdlNv4snlYs2BqysqViU1Mrz9J'
 TWITTER_ACCESS_TOKEN_SECRET = 'BaoBjiZAy8m7mJrbWE0NQI8Na7dSvzRdNRBUUZhKPk'
 
-t = Twython(app_key=TWITTER_APP_KEY, 
+twitter = Twython(app_key=TWITTER_APP_KEY, 
             app_secret=TWITTER_APP_KEY_SECRET, 
             oauth_token=TWITTER_ACCESS_TOKEN, 
             oauth_token_secret=TWITTER_ACCESS_TOKEN_SECRET)
@@ -23,7 +23,7 @@ def searchTweets(query,page=1,count=30,tweet_type='recent',rate_per_page=100,sin
 	search = urllib.urlopen("http://search.twitter.com/search.json?%s"%str(params))
 	dict = simplejson.loads(search.read())
 	for result in dict["results"]: # result is a list of dictionaries
-		timestamp = time.strftime('%d', time.strptime(result["created_at"],'%a, %d %b %Y %H:%M:%S +0000'))
+		timestamp = time.strftime('%d%m', time.strptime(result["created_at"],'%a, %d %b %Y %H:%M:%S +0000'))
 		tweets.append({'text':result["text"],'timestamp':timestamp})
 	return tweets
 
@@ -35,6 +35,9 @@ def collated_twitter_data(result_since='', result_until='2013-12-12',result_page
 	return tweets
 
 def get_all_olacabs_tweet(page=1,count=30):
+	tweets = []
 	user_timeline = twitter.getUserTimeline(screen_name="olacabs",page=5,count=100)
-	for tweet in search:
-		print tweet["created_at"], '\n', tweet['text'], '\n\n\n'
+	for tweet in user_timeline:
+		timestamp = time.strftime('%d%m', time.strptime(tweet["created_at"],'%a %b %d %H:%M:%S +0000 %Y'))
+		tweets.append({'text':tweet["text"],'timestamp':timestamp})
+	return tweets
