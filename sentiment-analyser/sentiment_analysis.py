@@ -36,8 +36,8 @@ for page in range (1,10):
 		date_keys_olacabs.append(str(date_of_data))
 
 #pp.pprint(date_array)
-date_keys_others = list(set(date_keys_others)) #remove duplicate
-date_keys_olacabs = list(set(date_keys_olacabs)) #remove duplicates
+date_keys_others = sorted(list(set(date_keys_others))) #remove duplicate
+date_keys_olacabs = sorted(list(set(date_keys_olacabs))) #remove duplicates
 
 #pp.pprint(date_keys_olacabs)
 #for i in range(13,21):
