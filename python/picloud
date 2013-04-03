@@ -1,0 +1,17 @@
+Please enter your PiCloud account login information.
+If you do not have an account, please create one at http://www.picloud.com
+E-mail: shashank@olacabs.com
+Password: 
+
+PiCloud uses API Keys, rather than your login information, to authenticate
+your machine. In the event your machine is compromised, you can deactivate
+your API Key to disable access. In this next step, you can choose to use
+an existing API Key for this machine, or create a new one. We recommend that
+each machine have its own unique key.
+
+Your API Key(s)
+5763
+
+Please select an API Key or just press enter to create a new one automatically: 
+API Key: 5764
+

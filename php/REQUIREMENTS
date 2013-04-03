@@ -1,0 +1,2 @@
+sudo apt-get install php-pear
+sudo pear install --alldeps mail

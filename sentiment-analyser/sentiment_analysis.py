@@ -85,6 +85,11 @@ ylabel('Sentiments #Olacabs')
 title('Sentiment Analysis for 7 day')
 grid(True)
 
+<<<<<<< HEAD
+=======
+#subplot(212)
+#count_tweets_plot, = plot(date_keys_others, count,'g-o',linewidth = 1.0)
+>>>>>>> d2801978665bfa729956bbb243cf4ae028db4af0
 subplot(212)
 count_tweets_plot, = plot(date_keys_others, count,'g-o',linewidth = 1.0)
 #legend([count_tweets_plot],["#olacabs"])
@@ -92,6 +97,15 @@ count_tweets_plot, = plot(date_keys_others, count,'g-o',linewidth = 1.0)
 #plt.annotate(label,xy = (14,10), xytext = (40, 40),textcoords = 'offset points', ha = 'right', va = 'bottom',bbox = dict(boxstyle = 'round,pad=0.5', fc = 'yellow', alpha = 0.5),arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
 #label = "Ipad Mini Contest"
 #plt.annotate(label,xy = (18,10), xytext = (-20, 20),textcoords = 'offset points', ha = 'right', va = 'bottom',bbox = dict(boxstyle = 'round,pad=0.5', fc = 'yellow', alpha = 0.5),arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
+<<<<<<< HEAD
+=======
+#xlabel('Day of this month[March]')
+#ylabel('Count of tweets ')
+#grid(True)
+
+#subplot(222)
+#total_tweets_plot, = plot(date_keys_olacabs, total_tweets, 'k--o' , linewidth = 1.0)
+>>>>>>> d2801978665bfa729956bbb243cf4ae028db4af0
 xlabel('Day of this month[March]')
 ylabel('Count of tweets ')
 grid(True)
