@@ -4,10 +4,10 @@ import time
 
 from twython import Twython
 
-TWITTER_APP_KEY = 'FnSEXxXvWzxeeiwMQvFnTw' #supply the appropriate value
-TWITTER_APP_KEY_SECRET = 'Di3eyCF4zJMQn0LUfThTel8jmCkymFJZeEtAnPtD5Q' 
-TWITTER_ACCESS_TOKEN = '14086063-MNKACDve56vXjyIRdlNv4snlYs2BqysqViU1Mrz9J'
-TWITTER_ACCESS_TOKEN_SECRET = 'BaoBjiZAy8m7mJrbWE0NQI8Na7dSvzRdNRBUUZhKPk'
+TWITTER_APP_KEY = 'XXXXXX' #supply the appropriate value
+TWITTER_APP_KEY_SECRET = 'XXXXXXXXX' 
+TWITTER_ACCESS_TOKEN = 'XXXXXXXXXXXXX'
+TWITTER_ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXX'
 
 twitter = Twython(app_key=TWITTER_APP_KEY, 
             app_secret=TWITTER_APP_KEY_SECRET, 
