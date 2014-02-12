@@ -10,3 +10,7 @@ do the iterative clustering
 spew out the data into a db?
 
 lets the analyser take it and display it on a dashbaord
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shashanksingh/prediction_python/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
